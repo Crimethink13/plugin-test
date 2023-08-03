@@ -20,7 +20,7 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-zip',
-      platforms: ['darwin'],
+      platforms: ['win32'],
     },
     {
       name: '@electron-forge/maker-deb',
@@ -37,4 +37,18 @@ module.exports = {
       config: {},
     },
   ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'Crimethink13',
+          name: 'plugin-test',
+        },
+        github_token: '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',
+        prerelease: false,
+        draft: true
+      }
+    }
+  ]
 };
